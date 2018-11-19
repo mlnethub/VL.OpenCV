@@ -11331,10 +11331,10 @@
               <ControlPoint Id="EvSkYS0L7LPNnfim56YvIa" Bounds="1115,110" />
               <!--
 
-    ************************ VideoInDevice ************************
+    ************************ VideoInDevice (Internal) ************************
 
 -->
-              <Node Name="VideoInDevice" Bounds="1058,370" Id="VUOlfBej9B1Op25Ef80r4T">
+              <Node Name="VideoInDevice (Internal)" Bounds="1058,370" Id="VUOlfBej9B1Op25Ef80r4T">
                 <p:NodeReference>
                   <Choice Kind="ClassDefinition" Name="Class" />
                   <FullNameCategoryReference ID="Primitive" />
