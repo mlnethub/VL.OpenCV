@@ -1850,20 +1850,26 @@
                     <Pin Id="R8jq0xwOeOCOoj7Z6WcW6s" Name="Output" Kind="StateOutputPin" />
                   </Node>
                   <Node Bounds="455,600,26,22" Id="GBEKcjdwuO9Lboy8zaUyhz">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Point" />
                       <Choice Kind="OperationCallFlag" Name="X" />
+                      <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="EdbZGRc2xW7LC5LkmKIdCe" Name="Input" Kind="StateInputPin" />
                     <Pin Id="OnhOnJillx5MyVg3BJ7xjn" Name="Output" Kind="StateOutputPin" />
                     <Pin Id="SSqKxePMBE9LbzPBxwniQ5" Name="X" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="490,564,26,22" Id="B4NZgXonctNQTXU3b9F3kY">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Point" />
                       <Choice Kind="OperationCallFlag" Name="Y" />
+                      <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="C8kCGY6BJIWP64goqO36mX" Name="Input" Kind="StateInputPin" />
                     <Pin Id="LE2CmWS5KdENlNWgB6CnOV" Name="Output" Kind="StateOutputPin" />
@@ -1880,20 +1886,26 @@
                     <Pin Id="GPMWHP2jdLIO0DFiSi4DBx" Name="Output" Kind="StateOutputPin" />
                   </Node>
                   <Node Bounds="537,600,26,22" Id="CbdAeFJd2YbMuJ9VmruUuS">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Point" />
                       <Choice Kind="OperationCallFlag" Name="X" />
+                      <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="JbdpLN4erBuQbjVJWeOshM" Name="Input" Kind="StateInputPin" />
                     <Pin Id="Lit0NzZdlZhMWb56WqCgdH" Name="Output" Kind="StateOutputPin" />
                     <Pin Id="TGBK9OfizVFLDNvKK0RHiU" Name="X" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="572,564,26,22" Id="KPd2tjjkKFAPI0Y6Am0FMS">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Point" />
                       <Choice Kind="OperationCallFlag" Name="Y" />
+                      <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="MBsC7W0r4SfMrOn34mnsid" Name="Input" Kind="StateInputPin" />
                     <Pin Id="UFcoUi4tWZQLGVqC62KOvh" Name="Output" Kind="StateOutputPin" />
@@ -3159,7 +3171,7 @@
                           </Node>
                           <ControlPoint Id="MCQwXFC8JDJPegRtEcoLL3" Bounds="494,407" />
                           <Node Bounds="438,484,26,22" Id="QYdFZdBvYZcQFdiYub03RT">
-                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                            <p:NodeReference LastCategoryFullName="System.Drawing.Point" LastSymbolSource="System.Drawing.dll">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <CategoryReference Kind="AssemblyCategory" Name="Point" />
                               <Choice Kind="OperationCallFlag" Name="X" />
@@ -3169,7 +3181,7 @@
                             <Pin Id="OWFowA8nVzNLPGkOpL74Hc" Name="X" Kind="OutputPin" />
                           </Node>
                           <Node Bounds="492,485,26,22" Id="JRj3aCsL7mFMaeEKTioB2W">
-                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                            <p:NodeReference LastCategoryFullName="System.Drawing.Point" LastSymbolSource="System.Drawing.dll">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="OperationCallFlag" Name="Y" />
                               <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true" />
@@ -3750,7 +3762,7 @@
     ************************ GetChannel ************************
 
 -->
-        <Node Name="GetChannel" Bounds="-179,151" Id="FxVl8lcf98cQGjKFAujCJ5">
+        <Node Name="GetChannel" Bounds="-179,151" Id="FxVl8lcf98cQGjKFAujCJ5" Summary="Returns a single channel image containing the selected channel by index.">
           <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -4149,20 +4161,26 @@
                         <Pin Id="DWxSDUGLBUeM1RnCPs0jKy" Name="Result" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="608,614,35,22" Id="ELmv2dR6ZeBLGPEctn1P2O">
-                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCVSharp.vl">
+                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="Width" />
                           <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true" />
+                          <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                            <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                          </CategoryReference>
                         </p:NodeReference>
                         <Pin Id="RYSq93n2KENLBjAANw2Zkz" Name="Input" Kind="StateInputPin" />
                         <Pin Id="KdF8fM62P5GPjlRWSBv3YW" Name="Output" Kind="StateOutputPin" />
                         <Pin Id="R98HYxTLWwdL8scRxfEDOy" Name="Width" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="672,615,39,22" Id="MjMt9csNJvjP63brTSrFxl">
-                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCVSharp.vl">
+                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true" />
                           <Choice Kind="OperationCallFlag" Name="Height" />
+                          <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                            <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                          </CategoryReference>
                         </p:NodeReference>
                         <Pin Id="CoCBQP2fvGUMhJ4K4K9NTH" Name="Input" Kind="StateInputPin" />
                         <Pin Id="Upkg2uyxOwaLuNjPtb3PuE" Name="Output" Kind="StateOutputPin" />
@@ -6713,7 +6731,7 @@
                         <Pin Id="SZzKfffTffUNCiZm8pLGId" Name="Border Type" Kind="InputPin" />
                       </Node>
                       <Node Bounds="438,350,64,22" Id="IwgegZEa8IXM8QNYSZzHYM">
-                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="Size" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -6722,6 +6740,9 @@
                               <Choice Kind="TypeFlag" Name="Int32" />
                             </p:DataTypeReference>
                           </PinReference>
+                          <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                            <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                          </CategoryReference>
                         </p:NodeReference>
                         <Pin Id="MDBvhi7lwSkN74hZhoW2QF" Name="Width" Kind="InputPin" DefaultValue="7">
                           <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
@@ -11280,7 +11301,7 @@
                         <Pin Id="KIIRuCPSA6iPVraIbUkC8Z" Name="Interpolation" Kind="InputPin" />
                       </Node>
                       <Node Bounds="601,318,39,22" Id="HKDt7BUG6EwMBRRgzvLPWe">
-                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="Size" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -11289,6 +11310,9 @@
                               <Choice Kind="TypeFlag" Name="Int32" />
                             </p:DataTypeReference>
                           </PinReference>
+                          <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                            <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                          </CategoryReference>
                         </p:NodeReference>
                         <Pin Id="Tctat8cbTuwOuhOhPU5A9r" Name="Width" Kind="InputPin" />
                         <Pin Id="DKnVtxmw6gkPUNKSJSxZEQ" Name="Height" Kind="InputPin" />
@@ -12523,7 +12547,7 @@
                         <Pin Id="LmDsGmna9YcNV79MU8dUZh" Name="Result" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="381,714,39,22" Id="DP2LcRmKF0zQNVfQ4PFiEP">
-                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                        <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="Size" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -12532,6 +12556,9 @@
                               <Choice Kind="TypeFlag" Name="Int32" />
                             </p:DataTypeReference>
                           </PinReference>
+                          <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                            <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                          </CategoryReference>
                         </p:NodeReference>
                         <Pin Id="Bs1jJb47d03MHrzRRDavME" Name="Width" Kind="InputPin" DefaultValue="250">
                           <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
@@ -14320,20 +14347,26 @@
                           <Patch Id="OykLq7QEeNjLwmj69QKlgX" Name="Update" ManuallySortedPins="true" />
                           <Patch Id="KIPTgQ6UkyePpmRCaXm6Ta" Name="Dispose" ManuallySortedPins="true" />
                           <Node Bounds="704,478,26,22" Id="GJjxh5Q6vC8OHW2imTOF8I">
-                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCVSharp.vl">
+                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <CategoryReference Kind="AssemblyCategory" Name="Point" />
                               <Choice Kind="OperationCallFlag" Name="X" />
+                              <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                                <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                              </CategoryReference>
                             </p:NodeReference>
                             <Pin Id="BikNezd0RAxLRhbIS01FVH" Name="Input" Kind="StateInputPin" />
                             <Pin Id="KySFz8zJLKNOuPqMdGkwFC" Name="Output" Kind="StateOutputPin" />
                             <Pin Id="EP1mbbbTnhwPhSZK54s5kJ" Name="X" Kind="OutputPin" />
                           </Node>
                           <Node Bounds="738,478,26,22" Id="R6xrnRvi6eZMo3AvBRTEak">
-                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCVSharp.vl">
+                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <CategoryReference Kind="AssemblyCategory" Name="Point" />
                               <Choice Kind="OperationCallFlag" Name="Y" />
+                              <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                                <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                              </CategoryReference>
                             </p:NodeReference>
                             <Pin Id="E81mfcfvGrTPvWFYHJFvig" Name="Input" Kind="StateInputPin" />
                             <Pin Id="RWAsjXndMsKNBqgefNS1PS" Name="Output" Kind="StateOutputPin" />
@@ -14427,7 +14460,6 @@
             <Link Id="EsfPwe8hq6iOt6FGy7ZCgo" Ids="DhVbkAXMrdHLi9BT99XEGT,T6i4TNA0BTlMTi9k5rLqPD" />
             <Link Id="D4eB0dmq0jGL7fssWs7ZWd" Ids="FFyHYDrEbuCQWzPvxCOOM4,EQafoa1NhGmLWATp2Sq0cD" />
             <Link Id="SL36s3HmIgNNyu0oKvXIQd" Ids="EQafoa1NhGmLWATp2Sq0cD,J3zFxcpm6PeOHdsQ8hA5ya" />
-            <Link Id="D0pinYzU1yBPUwJsj5cxs5" Ids="Nd2jCVXCncfMpO2HAQjAUp,E81mfcfvGrTPvWFYHJFvig" />
             <Link Id="ODqYpzWknCQPQWSPh2scUd" Ids="S2YrsWs8YmWLP7tgJAFgN2,AYG5EucRtS5OOKrbikmAiz" />
             <Link Id="Uubb4JpK8C0MqyNoOO1oTG" Ids="NdbyppvJlL6OtxA0TpHkyc,QcYhLbLYflDLdilePXEKzv" />
             <Link Id="CXLOfW7Vb9LOxaUTs5HOZ2" Ids="QcYhLbLYflDLdilePXEKzv,EDTHO9dWFsPMNZeTOmU5lO" />
@@ -14437,6 +14469,7 @@
             <Link Id="U6nod3uUwoyQBEANBMhgFo" Ids="J3zFxcpm6PeOHdsQ8hA5ya,KqVxTUib7aBQHpZKAOLMTk" />
             <Link Id="FG0xYWIqurzO9XK9w0SoMM" Ids="FaZjcVdKi7dQTmVYtllodM,V0m9zbsLhjGPwXadfJRWr2" />
             <Link Id="NirIoOTx4jAOZGo3LbtilP" Ids="GOW7Cqxc8BuMaKwmvoO0Qm,Qwv8xieKCjyQRtOSDKxJVu" />
+            <Link Id="LOkCk5lUZeMO1lsgFg9Zqq" Ids="KySFz8zJLKNOuPqMdGkwFC,E81mfcfvGrTPvWFYHJFvig" />
           </Patch>
         </Node>
         <!--
@@ -15992,7 +16025,7 @@
                     <Pin Id="JEb0SlaVTAlQAb1z2dC5kk" Name="Success" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="-215,-30,39,22" Id="U7PK6mvYe1HPnw7NpcZStK">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="System.Drawing.Size" LastSymbolSource="System.Drawing.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Size" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -16050,7 +16083,7 @@
                     <Pin Id="BG9aQr7m0R9NWtGOevXNuU" Name="Success" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="-306,-30,39,22" Id="OECQhF8kZn1MbvNugQLWlK">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="System.Drawing.Size" LastSymbolSource="System.Drawing.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Size" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -20419,7 +20452,7 @@
                     <Pin Id="SSR5EoIJtP5OhWk75ZEYDN" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="853,283,54,22" Id="PRK9VoUesa6P2DtOXqTLRx">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCVSharp.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Size" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -20428,6 +20461,9 @@
                           <Choice Kind="TypeFlag" Name="Int32" />
                         </p:DataTypeReference>
                       </PinReference>
+                      <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="ShflJ3D0NffQAHmTIlgkct" Name="Width" Kind="InputPin" />
                     <Pin Id="VbzqiINUvDdL6kFWG614GI" Name="Height" Kind="InputPin" />
@@ -20699,7 +20735,7 @@
                     <Pin Id="R2QkNQLm0sRLyBepucUBLV" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="832,310,54,22" Id="JuC6fEROpf7LDB02uThafi">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCVSharp.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Size" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -20708,6 +20744,9 @@
                           <Choice Kind="TypeFlag" Name="Int32" />
                         </p:DataTypeReference>
                       </PinReference>
+                      <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="HypHkJCMBt6LJB0OO7pnMe" Name="Width" Kind="InputPin" />
                     <Pin Id="Own8phkO0CFL2JtEAV0jJI" Name="Height" Kind="InputPin" />
@@ -21530,7 +21569,7 @@
                     <Pin Id="UO04PpJBPcgP31b2ErGKbQ" Name="Output" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="483,279,39,22" Id="LmXx8srJhzIN22zQ5oa1cn">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Size" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -21539,6 +21578,9 @@
                           <Choice Kind="TypeFlag" Name="Int32" />
                         </p:DataTypeReference>
                       </PinReference>
+                      <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="RbdkMAiNhZFPe9Fh51LZ35" Name="Width" Kind="InputPin" />
                     <Pin Id="PGPEApCqH73QcviNxP4XVF" Name="Height" Kind="InputPin" />
@@ -21566,7 +21608,7 @@
                     <Pin Id="PlM2imo8zIsQSXIMxrIvLI" Name="Output" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="405,281,39,13" Id="P4lr3OAjqE7LNgA2tt1OS0">
-                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                    <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="Size" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -21575,6 +21617,9 @@
                           <Choice Kind="TypeFlag" Name="Int32" />
                         </p:DataTypeReference>
                       </PinReference>
+                      <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                        <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                      </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="SCyXJTBT9vhPMWfzSR710v" Name="Width" Kind="InputPin" />
                     <Pin Id="Juyfl4C0fSqNjiFARtoiZj" Name="Height" Kind="InputPin" />
@@ -23964,7 +24009,7 @@
                             <Pin Id="T9TFyInj4MvLN2JknLqFFd" Name="Result" Kind="OutputPin" />
                           </Node>
                           <Node Bounds="650,758,39,22" Id="PVQL4IdxQVlPMmplhGo0Tw">
-                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                            <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <CategoryReference Kind="AssemblyCategory" Name="Point" />
                               <Choice Kind="OperationCallFlag" Name="Create" />
@@ -23973,6 +24018,9 @@
                                   <Choice Kind="TypeFlag" Name="Int32" />
                                 </p:DataTypeReference>
                               </PinReference>
+                              <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                                <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                              </CategoryReference>
                             </p:NodeReference>
                             <Pin Id="M0OTvhbfKRkO1gLLXJwKba" Name="X" Kind="InputPin" />
                             <Pin Id="Ck5iB0C4E6INadCEIIOEg0" Name="Y" Kind="InputPin" />
@@ -24271,8 +24319,6 @@
             <Link Id="Bmy0OuudcdSNPaBECpwbDv" Ids="JKtivtCbhFfOv3iILthUDO,KbkHvVrJp8WLp8yvD4pbZa" IsHidden="true" />
             <Link Id="Q5t6C9npib1OV82DnxtC9G" Ids="QoFsl2C2GFDPvJu4lhhSAu,EO5Audp0rgTQDlfKRzBCvc" IsHidden="true" />
             <Link Id="UgQk6mDiyjqO8RKpX8vyhv" Ids="EO5Audp0rgTQDlfKRzBCvc,JPMK2xmfx4yPg4vdZAqmHP" />
-            <Link Id="Lui9KZcj4cULYRpr8CFqlD" Ids="EO5Audp0rgTQDlfKRzBCvc,DjOpjTNr5xuL0dfLDaO3tI" />
-            <Link Id="HRCJnJW3rsyNiWllln8hPl" Ids="EO5Audp0rgTQDlfKRzBCvc,Ad2NToWKlOGNhzJFJE9buQ" />
             <Link Id="LxoJhfs2uO1QVMi8PGTj3T" Ids="AhGiFCxQY29Mw7FS9CPNuN,T5ceTy9N5nHMotlWofywiV" />
             <Link Id="EGP6gA9Tn7vP4mGLxxdItP" Ids="LfOsuFJAeaaN8hwgEChb8p,AhGiFCxQY29Mw7FS9CPNuN" IsHidden="true" />
             <Link Id="FSZXvItmVAXPbwO8ed33Wl" Ids="EZEJ6MGaWgdQGvch48cX4R,AZpuqnr8ZWnM5T6HFKChDj" />
@@ -24296,7 +24342,6 @@
             <Link Id="GRPvLHm5wOsQLpSOm6TXEp" Ids="BcNh2RSxDkTLDAuikh6Y8L,Rckjlef2V0YMW64q859wps,Ck5iB0C4E6INadCEIIOEg0" />
             <Link Id="AwRaJFFZBtxPh20e9fU2HW" Ids="NJGpDF3cJcpLyjEx7pMRAn,TkSy7sxFMUWO3B3WTtUD5B" />
             <Link Id="IFXn8Sh57T2LpG2aYC9pCq" Ids="UXdq3ZS7okCNBGbC8f9gIw,NMPyoPEEoemPeVzKCDeQ9o" />
-            <Link Id="MKdz9GkZi60LYMl1rP78O2" Ids="UXdq3ZS7okCNBGbC8f9gIw,RDdRWwWsaceNxJawvzOXEN" />
             <Link Id="IPAAPFgwIjQNMlCPUntcCR" Ids="Khl15ACLCbpMXSlQqkyubI,QenQozwc2j3OMgPFR6sZMI" />
             <Link Id="TsnvpXdcEvGLRKRL7jncTW" Ids="USaRwfpP88YQZNckWthQHq,JPcVPGA4uHgL9ygTHox7k7" />
             <Link Id="KJE684lGTxBMCs2IHM9blO" Ids="TZebj1K0544LSs5j3v5V3H,IUDNxVe8Z0lLtBpkBplqZE" IsFeedback="true" />
@@ -24344,6 +24389,9 @@
             <Link Id="CPn1Byq7kF2PWlnAWoiBhb" Ids="IxLq3eFPxXTMYWPPJwH9JH,UB4eq959kl8LgYaJzwWnyb" />
             <Link Id="MP27e3QxxH2Og9tr1gB0vR" Ids="MgvmPYaH4ZvNXdHb0V7IRo,CvT4gQQNSaiL8xkAagLZu5" />
             <Link Id="Lb1zhczafVbLcq10MuO1Qz" Ids="QNoniHartRPO3yfiZBsWwk,BWFDbnIPBUBMUJxRLKn9rb" />
+            <Link Id="DgXiMPaqTvqObvlxcWEtUK" Ids="PaKDzsvdsHbPlZFBJ69fCC,RDdRWwWsaceNxJawvzOXEN" />
+            <Link Id="T26hzEVojo9PNSXBaFdauk" Ids="BFucHsrgUQvPmwu0RrXSSp,Ad2NToWKlOGNhzJFJE9buQ" />
+            <Link Id="EW3XuaWPohBPdqwrhgjpzx" Ids="SVVk5mltxyAMTsXVzB3hlW,DjOpjTNr5xuL0dfLDaO3tI" />
           </Patch>
         </Node>
         <!--
@@ -29502,7 +29550,7 @@
                 <Pin Id="IPA87Ndv1EKNXXoKThgUtt" Name="Y" Kind="OutputPin" />
               </Node>
               <Node Bounds="1344,701,39,22" Id="AIYuMHTUmdAPHHs2lbWZHD">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Size" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="Size" />
                   <Choice Kind="OperationCallFlag" Name="Create" />
@@ -29511,6 +29559,9 @@
                       <Choice Kind="TypeFlag" Name="Int32" />
                     </p:DataTypeReference>
                   </PinReference>
+                  <CategoryReference Kind="AssemblyCategory" Name="Size" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="TECiNlo1AkSOQYl5NM9sGc" Name="Width" Kind="InputPin" />
                 <Pin Id="OvZEsRF0pptN8CBBivPHi9" Name="Height" Kind="InputPin" />
@@ -30112,10 +30163,13 @@
                 <Pin Id="ESZCObuhosBMYodaF1ZoKJ" Name="P2" Kind="OutputPin" />
               </Node>
               <Node Bounds="-98,1502,26,22" Id="UvI0G9X1OJzOp0ujWDb9Hs">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" />
                   <Choice Kind="OperationCallFlag" Name="X" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="AobmKyIeXVDLokMb3IKlaN" Name="Input" Kind="StateInputPin" />
                 <Pin Id="UJr5f3js9hmQNLz1c7Afvu" Name="Output" Kind="StateOutputPin" />
@@ -30123,30 +30177,39 @@
               </Node>
               <Link Id="DMiwnKVjDSlNmHYDyEkEEd" Ids="U69KkKTae4iMiSv5jdafeU,AobmKyIeXVDLokMb3IKlaN" />
               <Node Bounds="-49,1502,26,22" Id="JQEu3sBAMkRN2517LP6Nql">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Y" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="AAaGHIZqtOuMElfD07bA52" Name="Input" Kind="StateInputPin" />
                 <Pin Id="OwSnpbeYS3qL8SQIkJLxCW" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="Ez9Tv79I3lGK96mn6eBSCJ" Name="Y" Kind="OutputPin" />
               </Node>
               <Node Bounds="43,1502,26,22" Id="HBcDbSxnFy4LHRG7Ydp5bH">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" />
                   <Choice Kind="OperationCallFlag" Name="X" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="RizzAWPF11cNvd6nUd1Uue" Name="Input" Kind="StateInputPin" />
                 <Pin Id="EVvaqXgKpyxL6a8nv6QqsS" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="L0a5nzFR7XpL2uOPizFvLy" Name="X" Kind="OutputPin" />
               </Node>
               <Node Bounds="81,1502,26,22" Id="NGNbBhDhGaUOXEvvXNIrpI">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Y" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="MHwCqxOb9UROiwIQGIESEX" Name="Input" Kind="StateInputPin" />
                 <Pin Id="Pu6NLEGirW6N25hVzLVgMt" Name="Output" Kind="StateOutputPin" />
@@ -30165,8 +30228,6 @@
               </Node>
               <Link Id="CrQNBU5cC7ENFYE4SLARK7" Ids="UYaWmju8g0MMG5k93Uk4Lu,PFPtqdYIIGOOwLqmYwkpxB" />
               <Link Id="CHiTs94iWK6NpX2rlWPZIr" Ids="Ez9Tv79I3lGK96mn6eBSCJ,ExzFI1z27YzPAez9XnATHC" />
-              <Link Id="DQntW31sa1ALdHo4CAriRb" Ids="U69KkKTae4iMiSv5jdafeU,AAaGHIZqtOuMElfD07bA52" />
-              <Link Id="S7qLZEjttfEOUY9czXc4zf" Ids="ESZCObuhosBMYodaF1ZoKJ,MHwCqxOb9UROiwIQGIESEX" />
               <Node Bounds="36,1569,39,13" Id="VDhCLBoBoOuOwjubmHSSm9">
                 <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -30192,7 +30253,9 @@
               <Pin Id="LLlQyjIjXu5P5EUmk0tv84" Name="Point 2" Kind="OutputPin" Bounds="1390,933" />
               <Link Id="AuSQFAWSUL9Mtvwo5dngl1" Ids="O3KzYHc5txeNT85C9M7IJe,LLlQyjIjXu5P5EUmk0tv84" IsHidden="true" />
               <Link Id="BpC7dkyCpFXQNM7OTSIxsR" Ids="GsrgxmIiMVUMBdYymKYdSD,BvVh48wjhorPG5c1nig2fH" />
-              <Link Id="Notl0DLUtmsMlZZX6ruMJy" Ids="GsrgxmIiMVUMBdYymKYdSD,EFAHjsd9NOKNRNjyGvfHVI" />
+              <Link Id="RKKW28Nuk3BQZCSe7KKZ7E" Ids="UJr5f3js9hmQNLz1c7Afvu,AAaGHIZqtOuMElfD07bA52" />
+              <Link Id="AEi7v86qdXwLUlzCydVHaS" Ids="EVvaqXgKpyxL6a8nv6QqsS,MHwCqxOb9UROiwIQGIESEX" />
+              <Link Id="OOifF8h8mJONIPlDGhyn8z" Ids="EIfjwjWre0KNCwMn7dfWbf,EFAHjsd9NOKNRNjyGvfHVI" />
             </Patch>
           </Node>
           <!--
@@ -30230,10 +30293,13 @@
                 <Pin Id="HXk0hgdqngvNwtvlHJWhJC" Name="P2" Kind="OutputPin" />
               </Node>
               <Node Bounds="156,1502,26,22" Id="NejM7lfBr4COLBbotf52US">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" />
                   <Choice Kind="OperationCallFlag" Name="X" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="NpgrQH4dprGMp4VkbkotPG" Name="Input" Kind="StateInputPin" />
                 <Pin Id="RTpKxrOxbwCM1AThp8JZmi" Name="Output" Kind="StateOutputPin" />
@@ -30241,30 +30307,39 @@
               </Node>
               <Link Id="MRlWIRs9Nu8NFo8pdQQBfK" Ids="RY0ikVbpqLqLL0tEOV4ufD,NpgrQH4dprGMp4VkbkotPG" />
               <Node Bounds="205,1502,26,22" Id="JqLH5Bqy4XnPlhed78AX0W">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Y" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="KCtCHuNtg7RMCYy3RnZ1nm" Name="Input" Kind="StateInputPin" />
                 <Pin Id="BtNdHlRPXXgNFlPulD9mVM" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="BG5gIAYZ0sVM8lynT8lYGL" Name="Y" Kind="OutputPin" />
               </Node>
               <Node Bounds="297,1502,26,22" Id="RZtNnCLQmWtMgcbkCL0Vx4">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" />
                   <Choice Kind="OperationCallFlag" Name="X" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="UsNErzJXT80N063YjJR3tg" Name="Input" Kind="StateInputPin" />
                 <Pin Id="SgUtD1GZeOsMtBvSR5eATC" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="GH06tXRGwNcPoCOPXUOfdO" Name="X" Kind="OutputPin" />
               </Node>
               <Node Bounds="335,1502,26,22" Id="B24Cinq8mRuPtnFGgVH4DQ">
-                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll" LastDependency="VL.OpenCV.vl">
+                <p:NodeReference LastCategoryFullName="OpenCvSharp.Point" LastSymbolSource="OpenCvSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Y" />
                   <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
                 </p:NodeReference>
                 <Pin Id="FcfZhxtsp8MOjCAYrjKp1D" Name="Input" Kind="StateInputPin" />
                 <Pin Id="TgJgt8rFg77QUwKW6IrIIi" Name="Output" Kind="StateOutputPin" />
@@ -30283,8 +30358,6 @@
               </Node>
               <Link Id="LOg0Ruliv9BOscVH89RkD1" Ids="FQj8ccR6GzRNF5dj3sliYg,H7RMrksiyKlQF2dhxWjinn" />
               <Link Id="CglULC7J8m5MbSyFjRYwux" Ids="BG5gIAYZ0sVM8lynT8lYGL,CaQEPOLmldsOBxkf1Mgq9S" />
-              <Link Id="Tm5EMqlhuOcNSKY0cXfn7v" Ids="RY0ikVbpqLqLL0tEOV4ufD,KCtCHuNtg7RMCYy3RnZ1nm" />
-              <Link Id="UjQnUkyCLEXOhMEii41jK8" Ids="HXk0hgdqngvNwtvlHJWhJC,FcfZhxtsp8MOjCAYrjKp1D" />
               <Node Bounds="290,1569,39,13" Id="HflcOUwDWtmM9WKtTUM3co">
                 <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -30306,7 +30379,9 @@
               <Pin Id="AP5oVH3roZfO1zeYKQYhw7" Name="Point 2" Kind="OutputPin" Bounds="1390,933" />
               <Link Id="IE2ozOqnCL1PNg6iSJ1SOY" Ids="M46y3EDKzBZQGw3JfJ0zcX,AP5oVH3roZfO1zeYKQYhw7" IsHidden="true" />
               <Link Id="Llyn8EHyDiYN1BAlNlGJFJ" Ids="IVCeWgfFP4sN4kNmyXO2NW,VVLdltyW8skO9Vcrqgh2ks" />
-              <Link Id="V45S3ysGI2BOt28AOj3yYs" Ids="IVCeWgfFP4sN4kNmyXO2NW,Brg3Ohxw4cuMfrnc89eFqq" />
+              <Link Id="D72ATwCrdmXPb3aLJ24Jws" Ids="QH96ms1iI1XOdbmIY8QhSO,Brg3Ohxw4cuMfrnc89eFqq" />
+              <Link Id="Vd39KPZR46zOflDoxZlqX9" Ids="SgUtD1GZeOsMtBvSR5eATC,FcfZhxtsp8MOjCAYrjKp1D" />
+              <Link Id="V4JqwfsoA0PQTQCIMKAWYJ" Ids="RTpKxrOxbwCM1AThp8JZmi,KCtCHuNtg7RMCYy3RnZ1nm" />
             </Patch>
           </Node>
         </Canvas>
@@ -32552,8 +32627,10 @@
     </Canvas>
   </Patch>
   <NugetDependency Id="U4tB9Ur6LMRMSqt8T0sh4Q" Location="VL.CoreLib" Version="0.73.21-gf13095cd2d" />
-  <NugetDependency Id="HTCbQyS52HkPG4T7sMEBXj" Location="OpenCvSharp3-AnyCPU" Version="3.4.1.20180319" />
+  <NugetDependency Id="HTCbQyS52HkPG4T7sMEBXj" Location="OpenCvSharp4.Windows" Version="4.0.0.20190108" />
   <PlatformDependency Id="M1N4SojOni0Osyx2gZ4x10" Location="./lib/net461/VL.OpenCV.dll" />
   <PlatformDependency Id="UrxLbPlbKmVP94Zx5YWsQo" Location="System" />
   <PlatformDependency Id="KKd4psddv1PM1JDnyYS5Lv" Location="System.Drawing" />
+  <NugetDependency Id="IgPVr2GyXv4LDx9ZpuXgQN" Location="OpenCvSharp4.runtime.win" Version="4.0.0.20190108" />
+  <NugetDependency Id="NR8RI6FLqmzPhF1KAiW4Uo" Location="OpenCvSharp4" Version="4.0.0.20190108" />
 </Document>
