@@ -237,33 +237,33 @@
                       <Choice Kind="TypeFlag" Name="Vector2" />
                     </p:TypeAnnotation>
                   </Pin>
-                  <Pin Id="NPGCmwPoXwZOoEXzt7WYh3" Name="Main Direction" Kind="InputPin" DefaultValue="3.92999983">
-                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-                      <Choice Kind="TypeFlag" Name="Float32" />
-                    </p:TypeAnnotation>
-                  </Pin>
-                  <Pin Id="K1mEXvBiXU2MRT2vO8sHni" Name="Main Direction Tendency" Kind="InputPin" DefaultValue="0.18">
+                  <Pin Id="NPGCmwPoXwZOoEXzt7WYh3" Name="Main Direction" Kind="InputPin" DefaultValue="0.85">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
-                  <Pin Id="Nftta5aysPANyV3TnSsOJS" Name="Direction Deviation" Kind="InputPin" DefaultValue="1">
+                  <Pin Id="K1mEXvBiXU2MRT2vO8sHni" Name="Main Direction Tendency" Kind="InputPin" DefaultValue="0.75">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
-                  <Pin Id="QUogz2XdOjONPzXLp2s8Di" Name="Speed" Kind="InputPin" DefaultValue="0.2">
+                  <Pin Id="Nftta5aysPANyV3TnSsOJS" Name="Direction Deviation" Kind="InputPin" DefaultValue="5.09">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
-                  <Pin Id="QuHVo7DcjBSPg2G8cg1Nb6" Name="Smoothing" Kind="InputPin" DefaultValue="1.2">
+                  <Pin Id="QUogz2XdOjONPzXLp2s8Di" Name="Speed" Kind="InputPin" DefaultValue="0.4">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Pin Id="QuHVo7DcjBSPg2G8cg1Nb6" Name="Smoothing" Kind="InputPin" DefaultValue="0.68">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
                   <Pin Id="LIyn7HiSNI7PJ3UrbbvCtU" Name="Reset" Kind="InputPin">
-                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Boolean" />
                     </p:TypeAnnotation>
                   </Pin>

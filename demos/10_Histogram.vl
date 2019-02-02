@@ -124,6 +124,32 @@
                 <Choice Kind="TypeFlag" Name="Path" />
               </p:TypeAnnotation>
             </Pad>
+            <Node Bounds="516,527,67,13" Id="JAzXV8x8oyjMeVFL5MsaJW">
+              <p:NodeReference LastCategoryFullName="OpenCV.Sink" LastSymbolSource="VL.OpenCV.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="Renderer" />
+              </p:NodeReference>
+              <Pin Id="Linnr2Ck4gtLJZaq4Ief80" Name="Input" Kind="InputPin" />
+              <Pin Id="KEkzg4v4fp1NfCkDYtcu0h" Name="Size From Image" Kind="InputPin">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="GvZfWBzdhr4NXVQpJ1uu97" Name="Enabled" Kind="InputPin">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Node>
+            <Node Bounds="516,437,79,13" Id="OMdYKz2Rr4MMJLGFwUQqbm">
+              <p:NodeReference LastCategoryFullName="OpenCV.Utils" LastSymbolSource="VL.OpenCV.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="GetChannel" />
+              </p:NodeReference>
+              <Pin Id="TYRaPRWvNKdOnPGtp9uOwe" Name="Input" Kind="InputPin" />
+              <Pin Id="HxRRuahKTi8NlTWQFD6L5Q" Name="Index" Kind="InputPin" />
+              <Pin Id="DvJ10HyR7I4PQ3P7CGi7aw" Name="Output" Kind="OutputPin" />
+            </Node>
           </Canvas>
           <ProcessDefinition Id="FHNLl8GWgcVOJzRkkPI83E">
             <Fragment Id="MRFnVwHDf0WOO7H3jKbCxI" Patch="ESJZDDS0I02LAWDOx9RJVV" Enabled="true" />
@@ -135,6 +161,9 @@
           <Link Id="QA4uMSldLk4OZ75ShvxlId" Ids="BhHMOkcKHbzMisXOXIO5iE,HmVHxuLTXT5QOhii8QkHDQ" />
           <Link Id="TcLxMo8LHqbOFcXSSTWXu6" Ids="Bui91MWqvymP7bAFqvKkWv,IzVvaLmqZuPNvkuVfDg21Y" />
           <Link Id="Gpg7CCebJijOR1MmCXJljO" Ids="KVY5Ovo7fESQJtyu0AJqLl,RRmJ57qWSbsNCz8jLgI8CC" />
+          <Link Id="UYEYBk6wF7HMTnXPnm8F7p" Ids="Q9Bi9rLbmxbOJ6RSuA2zK3,TYRaPRWvNKdOnPGtp9uOwe" />
+          <Link Id="D9kbE0MtGsuPloIxbZeJfa" Ids="HxZHAmKYqQaQBeYQ8b1Gjj,HxRRuahKTi8NlTWQFD6L5Q" />
+          <Link Id="HURTxVkV44iOk7yRGsF4x5" Ids="DvJ10HyR7I4PQ3P7CGi7aw,Linnr2Ck4gtLJZaq4Ief80" />
         </Patch>
       </Node>
     </Canvas>
