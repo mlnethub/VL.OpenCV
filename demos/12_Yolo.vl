@@ -163,7 +163,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Renderer" />
               </p:NodeReference>
-              <Pin Id="L9PCeytvolSMZrkWlhHW0E" Name="Bounds" Kind="InputPin" DefaultValue="77, 77, 511, 655">
+              <Pin Id="L9PCeytvolSMZrkWlhHW0E" Name="Bounds" Kind="InputPin" DefaultValue="1836, 88, 510, 653">
                 <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                   <Choice Kind="TypeFlag" Name="Rectangle" />
                 </p:TypeAnnotation>
@@ -178,6 +178,9 @@
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+              </p:ValueBoxSettings>
             </Pad>
             <Pad Id="EEmkUpG3XWLPo6jKPhc6Uh" Comment="Cfg File" Bounds="533,100,190,19" ShowValueBox="true" isIOBox="true" Value="yolov3.cfg">
               <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
@@ -199,7 +202,7 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pad>
-            <Pad Id="I7KmidjXo69P6atuhIrO9b" Bounds="922,557,530,313" ShowValueBox="true" isIOBox="true" Value="For use with the COCO Dataset (80 classes):&#xD;&#xA;&#xD;&#xA;1) Download Cfg file:&#xD;&#xA;https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg&#xD;&#xA;&#xD;&#xA;2) Download Darknet Model:&#xD;&#xA;https://pjreddie.com/media/files/yolov3.weights&#xD;&#xA;&#xD;&#xA;3) Download Labels:&#xD;&#xA;https://raw.githubusercontent.com/pjreddie/darknet/blob/master/data/coco.names&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;References:&#xD;&#xA;Yolo: https://pjreddie.com/darknet/yolo/&#xD;&#xA;COCO Dataset: http://cocodataset.org/#explore">
+            <Pad Id="I7KmidjXo69P6atuhIrO9b" Bounds="922,557,530,313" ShowValueBox="true" isIOBox="true" Value="For use with the COCO Dataset (80 classes):&#xD;&#xA;&#xD;&#xA;1) Download Cfg file:&#xD;&#xA;https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg&#xD;&#xA;&#xD;&#xA;2) Download Darknet Model:&#xD;&#xA;https://pjreddie.com/media/files/yolov3.weights&#xD;&#xA;&#xD;&#xA;3) Download Labels:&#xD;&#xA;https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;References:&#xD;&#xA;Yolo: https://pjreddie.com/darknet/yolo/&#xD;&#xA;COCO Dataset: http://cocodataset.org/#explore">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -534,6 +537,15 @@
               <Pin Id="GEbfPmx0SMjN0umAm0QrRJ" Name="Confidence" Kind="InputPin" />
               <Pin Id="Uf0JDsPF1UXPQplZeMpHUe" Name="Output" Kind="OutputPin" />
             </Node>
+            <Pad Id="A2CgmGymKvVOhwazijQFjt" Bounds="876,212,198,39" ShowValueBox="true" isIOBox="true" Value="Bang for static image or enable for video (heavy)">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
           </Canvas>
           <Patch Id="F86qn5fo26ZLEie2wJpoPx" Name="Create" />
           <Patch Id="SGDHtKABXi6LTCv43mTfvO" Name="Update">
@@ -569,7 +581,6 @@
           <Link Id="FDLTozc0tqtLsk1AAgXSuO" Ids="OQWlEuDz02IPHc0chz8Kc3,MHlradfY7b6MT6eAWs0i2y" />
           <Link Id="GUQ8H4mp2W8NPOvvYyXpCf" Ids="GOILcYA37GhPgSlAr7zXCn,PdpPlWnjmFnLxLSs7hfRyN" />
           <Link Id="P8s0mtA9lHEOdGUVAQFdDb" Ids="Qe5CuyXCvcqNSX0ETNZnkU,ALwkhECHR7NOc0GNiFO33f" />
-          <Link Id="OHIpu1cmWxoPlE3MNam8pw" Ids="QuBDEdU4I9EPgSI8L7OaPp,USNu9vwahuSOmsAa8HaYHv" />
           <Link Id="HHOGBmlZksKNcHSC26d9py" Ids="EEmkUpG3XWLPo6jKPhc6Uh,INpmVYmXzbKMOjIwBKKeGg" />
           <Link Id="F341f4CpYDZLE4xlnKv8gf" Ids="A1NJl3hYExiM54vcIVZoN6,GGi9XrvrgV6OiifAQa1DVM" />
           <Link Id="Jlilw37YhqMPIA5xVsbOmz" Ids="GjUvxBOQikEP9vRLDjc8fO,Jrbff98LTD8N27Go4tBF5J" />
@@ -582,12 +593,13 @@
           <Link Id="J5S5bRs0taFOfo0r5t257U" Ids="AtTyunrz6GxMohV1ySziEw,ByPRgvpJOEqOr92wiMFA1w" />
           <Link Id="VX4Zggty9OtQCCWI3PEGAo" Ids="JF3Kl5ij1utN7z3E3vmxrw,AGcYOZgJV1DP4iDE0yKmRL" />
           <Link Id="EiWL2L4V21pObp9tZhDCUk" Ids="O1avO4jQH3oLbm7DPLv4In,HUnPpmEOtgAO5azUKA80in" />
-          <Link Id="LlIPaseDga5LdL1YgPDPla" Ids="QuBDEdU4I9EPgSI8L7OaPp,PzgMF9Ta1rCPwnqTsUUd5I" />
           <Link Id="PgppawTqKFGLuAIiVwOPlh" Ids="ARvKgmnW9NtLaFuk2gRfHE,Sd0ec5rgQe4Mqubz2M59Zb" />
           <Link Id="DVfI78z274RNYDtPXevvoL" Ids="MftBvgP0XR2M4WfU5Orwvl,JE2J75eGFafLDOHBOQVdzD" />
           <Link Id="Al33FHuDix3OQ8HbS1jS37" Ids="Bg2lFrUcxTrNlgXrY9ggWB,GEbfPmx0SMjN0umAm0QrRJ" />
           <Link Id="LF3iphgNbM2LY3jLs2DpY7" Ids="Uf0JDsPF1UXPQplZeMpHUe,MMh0UESYmX5P25Vo2VavhP" />
           <Link Id="QOjydygR89YMimATZwg9ON" Ids="U5hn2jRlH4aPZLtzVaPnCK,EWTR2HV9xUcPqrPYYmEiMg" />
+          <Link Id="DYWT2HM9jb5QHeYHkucMcR" Ids="QuBDEdU4I9EPgSI8L7OaPp,USNu9vwahuSOmsAa8HaYHv" />
+          <Link Id="Iuexm2LkLVzP8QdKKFZHY1" Ids="QuBDEdU4I9EPgSI8L7OaPp,PzgMF9Ta1rCPwnqTsUUd5I" />
         </Patch>
       </Node>
     </Canvas>
