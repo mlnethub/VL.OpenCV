@@ -133,7 +133,7 @@ namespace VL.OpenCV
         /// <param name="translationVector">1x3 translation vector</param>
         /// <param name="specials">Set of values to be appended to the last column of the resulting matrix</param>
         /// <returns>4x4 transformation matrix in the correct order for vvvv</returns>
-        private static Matrix ToTransformationMatrix(Mat matrix, Mat translationVector, float[] specials)
+        private static Matrix ToTransformationMatrix(Mat matrix, Mat translationVector, FourthColumn fourthColumn)
         {
             Matrix result = Matrix.Identity;
             if (matrix != null && translationVector != null)
@@ -141,27 +141,31 @@ namespace VL.OpenCV
                 if ((matrix.Width == 3 && matrix.Height == 3)
                     && (translationVector.Width == 1 && translationVector.Height == 3))
                 {
+                    var fourthColumnArray = fourthColumn == FourthColumn.Standard ? new float[4] { 0, 0, 0, 1 } : new float[4] { 0, 0, 1, 0 };
                     Mat rm = matrix.Clone();
                     Mat tv = translationVector.Clone();
                     rm.ConvertTo(rm, OpenCvSharp.MatType.CV_32FC1);
                     tv.ConvertTo(tv, OpenCvSharp.MatType.CV_32FC1);
+
+                    // we need to transpose our 3x3 matrix here
+
                     result = new Matrix(
-                        rm.At<float>(0, 0),
-                        rm.At<float>(1, 0),
-                        rm.At<float>(2, 0),
-                        specials[0],
-                        rm.At<float>(0, 1),
-                        rm.At<float>(1, 1),
-                        rm.At<float>(2, 1),
-                        specials[1],
-                        rm.At<float>(0, 2),
-                        rm.At<float>(1, 2),
-                        rm.At<float>(2, 2),
-                        specials[2],
-                        tv.At<float>(0),
-                        tv.At<float>(1),
-                        tv.At<float>(2),
-                        specials[3]);
+                        rm.At<float>(0, 0),   //11
+                        rm.At<float>(1, 0),   //12
+                        rm.At<float>(2, 0),   //13
+                        fourthColumnArray[0], //14
+                        rm.At<float>(0, 1),   //21
+                        rm.At<float>(1, 1),   //22
+                        rm.At<float>(2, 1),   //23
+                        fourthColumnArray[1], //24
+                        rm.At<float>(0, 2),   //31
+                        rm.At<float>(1, 2),   //32
+                        rm.At<float>(2, 2),   //33
+                        fourthColumnArray[2], //34
+                        tv.At<float>(0),      //41
+                        tv.At<float>(1),      //42
+                        tv.At<float>(2),      //43
+                        fourthColumnArray[3]);//44
                 }
             }
             return result;
@@ -181,8 +185,7 @@ namespace VL.OpenCV
             {
                 Mat rotationMatrix = new Mat();
                 Cv2.Rodrigues(rotationVector, rotationMatrix);
-                float[] specials = new float[4] { 0, 0, 0, 1 };
-                result = ToTransformationMatrix(rotationMatrix, translationVector, specials);
+                result = ToTransformationMatrix(rotationMatrix, translationVector, FourthColumn.Standard);
             }
             return result;
         }
@@ -199,6 +202,7 @@ namespace VL.OpenCV
             // 11  21  31
             // 12  22  32
             // 13  23  33
+            // we need to transpose our 3x3 matrix here
             double[,] rmatrix = new double[3, 3];
             rmatrix[0, 0] = transform.M11;
             rmatrix[0, 1] = transform.M21;
@@ -229,8 +233,13 @@ namespace VL.OpenCV
         public static Matrix ToTransformationMatrix(Mat cameraMatrix)
         {
             Mat translationVector = Mat.Zeros(3, 1, OpenCvSharp.MatType.CV_64FC1);
-            float[] specials = new float[4] { 0, 0, 1, 0 };
-            return ToTransformationMatrix(cameraMatrix, translationVector, specials);
+            return ToTransformationMatrix(cameraMatrix, translationVector, FourthColumn.Projection);
+        }
+
+        enum FourthColumn
+        {
+            Standard,
+            Projection
         }
 
         #endregion Transformation related code
