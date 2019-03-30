@@ -37666,11 +37666,13 @@
     </Node>
   </Patch>
   <NugetDependency Id="U4tB9Ur6LMRMSqt8T0sh4Q" Location="VL.CoreLib" Version="0.73.21-gf13095cd2d" />
-  <NugetDependency Id="HTCbQyS52HkPG4T7sMEBXj" Location="OpenCvSharp4" Version="4.0.1.20190326" />
-  <PlatformDependency Id="M1N4SojOni0Osyx2gZ4x10" Location="./lib/net461/VL.OpenCV.dll" />
+  <PlatformDependency Id="M1N4SojOni0Osyx2gZ4x10" Location="./src/bin/Release/net461/VL.OpenCV.dll" />
   <PlatformDependency Id="UrxLbPlbKmVP94Zx5YWsQo" Location="System" />
   <PlatformDependency Id="KKd4psddv1PM1JDnyYS5Lv" Location="System.Drawing" />
   <NugetDependency Id="FdCsKtXFebcMEdaadN2Tyv" Location="VL.Lang" Version="0.96.16-g9c5e367775" />
   <PlatformDependency Id="Ee0UUmfqOVWPSXM6OSY7rA" Location="System.Windows.Forms" />
-  <NugetDependency Id="ADJDL5iVBfnO3Fh7QYjn9j" Location="OpenCvSharp4.runtime.win" Version="4.0.1.20190326" />
+  <PlatformDependency Id="Mek3Wv2WjMBMHtZ9xQNANB" Location="./src/bin/Release/net461/OpenCvSharp.Blob.dll" />
+  <PlatformDependency Id="JKY8LEerURUQL3suuUL918" Location="./src/bin/Release/net461/OpenCvSharp.dll" />
+  <PlatformDependency Id="CKqFb8LOLp1NFkh3YgOdct" Location="./src/bin/Release/net461/OpenCvSharp.Extensions.dll" />
+  <PlatformDependency Id="VQOSG9VV4QHMp5Ka2faIk0" Location="./src/bin/Release/net461/OpenCvSharp.UserInterface.dll" />
 </Document>
