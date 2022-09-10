@@ -39,7 +39,7 @@ namespace VL.OpenCV
         private bool showText = false;
         private bool enabled = true;
         private bool loaded = false;
-        private int imageID = 0;
+        private ValueTuple<int, int, int, int> imageID;
 
         double aspectRatio = 1;
         System.Drawing.Size sizeDelta;
@@ -47,18 +47,21 @@ namespace VL.OpenCV
 
         public CvImage Image
         {
-            get { return image; }
+            get => image;
             set
             {
                 if (enabled && value != image && value != null && (value.Width > 0 && value.Height > 0))
                 {
                     loaded = false;
                     image = value;
-                    aspectRatio = (double)image.Cols / (double)image.Rows;
+                    aspectRatio = image.Cols / (double)image.Rows;
                     if (image != null)
                     {
-                        if (image.Width + image.Height + image.Channels + image.Mat.Type().Value != imageID)
+                        if (GetImageID(image?.Mat) != imageID)
+                        {
                             HandleResize();
+                        }
+
                         RefreshIplImage(image?.Mat);
                     }
                     loaded = true;
@@ -85,9 +88,30 @@ namespace VL.OpenCV
             }
         }
 
+        private bool _showCursor = true;
+        public bool ShowCursor
+        {
+            get
+            {
+                return _showCursor;
+            }
+            set
+            {
+                if (value == _showCursor)
+                    return;
+
+                if (value)
+                    Cursor.Show();
+                else
+                    Cursor.Hide();
+
+                _showCursor = value;
+            }
+        }
+
         public RendererMode RendererMode
         {
-            get { return rendererMode; }
+            get => rendererMode;
             set
             {
                 rendererMode = value;
@@ -134,21 +158,26 @@ namespace VL.OpenCV
 
         public void RefreshIplImage(Mat img)
         {
-            if (img == null || pictureBox.Image == null)
+            if (pictureBox.Image == null)
             {
                 pictureBox.ImageIpl = img;
-                imageID = img.Width + img.Height + img.Channels() + img.Type().Value;
+                imageID = GetImageID(img);
             }
-            else if (img.Width + img.Height + img.Channels() + img.Type().Value != imageID)
+            else if (GetImageID(img) != imageID)
             {
                 pictureBox.ImageIpl = img;
-                imageID = img.Width + img.Height + img.Channels() + img.Type().Value;
+                imageID = GetImageID(img);
             }
             else
             {
                 BitmapConverter.ToBitmap(img, (Bitmap)pictureBox.Image);
             }
             pictureBox.Invalidate();
+        }
+
+        private ValueTuple<int, int, int, int> GetImageID(Mat img)
+        {
+            return (img.Width, img.Height, img.Channels() , img.Type().Value);
         }
 
         private void Renderer_Load(object sender, EventArgs e)
@@ -171,9 +200,9 @@ namespace VL.OpenCV
                 {
                     pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                     if (Size.Width != 613 || Size.Height != 613)
+                    {
                         ClientSize = new System.Drawing.Size(ClientSize.Width, (int)(ClientSize.Width / aspectRatio));
-                    //if (rendererMode == RendererMode.SizeFromImage)
-                        //MaximumSize = MinimumSize = SizeFromClientSize(ClientSize);
+                    }
                 }
                 else
                 {
@@ -186,7 +215,6 @@ namespace VL.OpenCV
                     }
                     else if (rendererMode == RendererMode.AspectRatioScale)
                     {
-                        //ClientSize = new System.Drawing.Size(ClientSize.Width, (int)(ClientSize.Width / aspectRatio));
                         ClientSize = new System.Drawing.Size(ClientSize.Width, (int)(ClientSize.Width / aspectRatio));
                         //needed to prevent underscaling when in AspectRatioScale mode
                         MinimumSize = new System.Drawing.Size(2 * sizeDelta.Width, (int)((2 * sizeDelta.Width) / aspectRatio) + sizeDelta.Height);
@@ -236,7 +264,9 @@ namespace VL.OpenCV
             {
                 var boundsinPix = DIPHelpers.DIPToPixel(bounds);
                 if (boundsinPix != Bounds)
+                {
                     Bounds = boundsinPix;
+                }
             }
         }
 
@@ -245,7 +275,10 @@ namespace VL.OpenCV
             base.OnResize(e);
             BoundsChanged.OnNext(DIPHelpers.DIP(Bounds));
             if (loaded)
+            {
                 Text = "cw: " + ClientSize.Width + "   ch: " + ClientSize.Height;
+            }
+
             pictureBox.ClientSize = ClientSize;
         }
 

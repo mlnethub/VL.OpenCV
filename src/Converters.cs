@@ -1,7 +1,7 @@
 ﻿using OpenCvSharp;
-using Xenko.Core.Mathematics;
+using Stride.Core.Mathematics;
 using System;
-using System.Runtime.CompilerServices;
+using System.Buffers;
 using VL.Lib.Basics.Imaging;
 
 namespace VL.OpenCV
@@ -10,19 +10,40 @@ namespace VL.OpenCV
     {
         class MatImage : IImage
         {
-            class Data : IImageData
+            public unsafe class Data : MemoryManager<byte>, IImageData
             {
-                public Data(Mat mat, ImageInfo info)
+                readonly IntPtr FPointer;
+                readonly int FLength;
+
+                public Data(Mat mat)
                 {
-                    Pointer = mat.Data;
+                    FPointer = mat.Data;
+                    FLength = (int)(mat.Total() * mat.ElemSize());
                     ScanSize = (int)mat.Step();
-                    Size = info.ImageSize;
                 }
 
-                public IntPtr Pointer { get; }
                 public int ScanSize { get; }
-                public int Size { get; }
-                public void Dispose() { }
+
+                public ReadOnlyMemory<byte> Bytes => Memory;
+
+                public override Span<byte> GetSpan()
+                {
+                    return new Span<byte>(FPointer.ToPointer(), FLength);
+                }
+
+                public override MemoryHandle Pin(int elementIndex = 0)
+                {
+                    // Already pinned
+                    return new MemoryHandle(FPointer.ToPointer(), pinnable: this);
+                }
+
+                public override void Unpin()
+                {
+                }
+
+                protected override void Dispose(bool disposing)
+                {
+                }
             }
 
             readonly Mat FMat;
@@ -43,41 +64,56 @@ namespace VL.OpenCV
             public void Dispose()
             {
                 if (FIsOwner)
+                {
                     FMat.Dispose();
+                }
             }
 
-            public IImageData GetData() => new Data(FMat, Info);
+            public IImageData GetData()
+            {
+                return new Data(FMat);
+            }
         }
 
         public static IImage ToImage(this CvImage input, PixelFormat pixelFormat, bool takeOwnership)
         {
             if (input == CvImage.Damon)
+            {
                 takeOwnership = false;
+            }
+
             return new MatImage(input.Mat, pixelFormat, takeOwnership);
         }
 
-        public static unsafe Mat ToMat(this IImage input)
+        public static Mat ToMat(this IImage input)
         {
             var info = input.Info;
             var type = info.Format.ToMatType(info.OriginalFormat);
             using (var srcData = input.GetData())
             {
-                var dstData = new byte[srcData.Size];
-                fixed (byte* dst = dstData)
-                    ImageExtensions.CopyTo(srcData, info, dst);
+                var dstData = new byte[srcData.Bytes.Length];
+                srcData.Bytes.CopyTo(dstData);
                 return new Mat(info.Height, info.Width, type, dstData, srcData.ScanSize);
             }
         }
 
-        public static unsafe void ToMat(this IImage input, Mat dstMat)
+        public static void ToMat(this IImage input, Mat dstMat)
         {
             var info = input.Info;
             var type = info.Format.ToMatType(info.OriginalFormat);
+            dstMat.Create(info.Height, info.Width, type);
             using (var srcData = input.GetData())
+            using (var dstData = new MatImage.Data(dstMat))
             {
-                dstMat.Create(info.Height, info.Width, type);
-                ImageExtensions.CopyTo(srcData, info, (byte*)dstMat.Data.ToPointer());
+                ImageExtensions.CopyTo(srcData, dstData);
             }
+        }
+
+        public static byte[] ToByteArray(Mat mat)
+        {
+            byte[] result;
+            mat.GetArray<byte>(out result);
+            return result;
         }
 
         public static OpenCvSharp.MatType ToMatType(this PixelFormat format, string originalFormat)
@@ -100,7 +136,10 @@ namespace VL.OpenCV
                     return OpenCvSharp.MatType.CV_8UC4;
                 case PixelFormat.Unknown:
                     if (originalFormat.Equals("bgr", StringComparison.OrdinalIgnoreCase)) // HACK
+                    {
                         return OpenCvSharp.MatType.CV_8UC3;
+                    }
+
                     break;
             }
             throw new UnsupportedPixelFormatException(format);
@@ -119,9 +158,13 @@ namespace VL.OpenCV
             var code = sourceCode + "2" + targetCode;
             ColorConversionCodes result;
             if (Enum.TryParse(code, out result))
+            {
                 Cv2.CvtColor(input, output, result, channels);
+            }
             else
+            {
                 throw new Exception("Specified conversion code does not exist: " + code);
+            }
         }
 
         #region Transformation related code
@@ -214,7 +257,8 @@ namespace VL.OpenCV
             rmatrix[2, 1] = transform.M23;
             rmatrix[2, 2] = transform.M33;
             double[] rvecArray = new double[3];
-            Cv2.Rodrigues(rmatrix, out rvecArray);
+            double[,] jacobian;
+            Cv2.Rodrigues(rmatrix, out rvecArray, out jacobian);
             rotationVector = new Mat(3, 1, OpenCvSharp.MatType.CV_64FC1, rvecArray);
 
             //tvec
